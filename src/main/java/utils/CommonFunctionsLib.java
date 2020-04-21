@@ -3,7 +3,9 @@ package utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.*;
@@ -129,5 +131,13 @@ public class CommonFunctionsLib extends Driver {
 			e.printStackTrace();
 		}
 	}
+	//generate todays date
+	public static String generateDate() { 		 
+		 DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");		
+		 Date date = new Date();		
+		 String date1= dateFormat.format(date);		 
+		 return date1;
+		 
+		 }
 
 }

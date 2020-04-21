@@ -43,7 +43,7 @@ public class TestRunner extends Driver {
 
 	@Test
 
-	public void createAccount() {
+	public void createAccount() throws InterruptedException {
 		HomePage hp = new HomePage();
 		hp.clickSignIn();
 
@@ -61,11 +61,7 @@ public class TestRunner extends Driver {
 		tshirt.clickTshirts();
 		
 		ShowTshirt showts = new ShowTshirt(driver);
-		showts.hoverMouse();
-
-		SelectTshirt sel = new SelectTshirt();
-		sel.addToCart(CommonFunctionsLib.readTestDataProperties("Quantity"),
-				CommonFunctionsLib.readTestDataProperties("Size"), CommonFunctionsLib.readTestDataProperties("Color"));
+		showts.hoverMouse();	
 
 		ProductAdded proadd = new ProductAdded();
 		proadd.productAddedToShoppingKart();
@@ -80,7 +76,10 @@ public class TestRunner extends Driver {
 		ship.proceedToShippingCheckOut();
 
 		Payment pay = new Payment();
+		pay.totalAmountToPay();
+		pay.modeOfPayment();
 		pay.selectpaymentType();
+		
 
 		OrderSummary ordSum = new OrderSummary();
 		ordSum.orderSummary();
@@ -88,9 +87,11 @@ public class TestRunner extends Driver {
 		OrderConfirmationPage ordconf = new OrderConfirmationPage();
 		ordconf.myOrderInfo();
 		ordconf.myOrderDetails();
+		
 
 		BackToMyOrder myord = new BackToMyOrder();
-		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo());
+		
+		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(),CommonFunctionsLib.generateDate(),pay.totalAmountToPay(),pay.modeOfPayment());
 		Assert.assertTrue(flag);
 		logger.info("Your order on My Store is successfully placed");
 

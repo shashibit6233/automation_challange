@@ -16,7 +16,7 @@ public class ProductAdded extends Driver {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void productAddedToShoppingKart() {
+	public void productAddedToShoppingKart() {			
 		CommonFunctionsLib.clickButton(btnchkout);
 
 	}
