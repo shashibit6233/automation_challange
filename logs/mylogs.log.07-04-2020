@@ -1,0 +1,31 @@
+2020-04-07  10:01:10-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-07  10:01:10-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-07  10:01:32-main[ mainid]  INFO  stepdefinations.VerifyOrderSteps:59 - --------------User logged in successfully--------------
+			2020-04-07  10:01:39-main[ mainid]  INFO  pages.SelectTshirt:40 - Selected T-shirt color is Blue
+			2020-04-07  10:01:54-main[ mainid]  INFO  stepdefinations.VerifyOrderSteps:94 - Your order on My Store is successfully placed
+			2020-04-07  10:01:54-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-07  10:01:54-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-07  10:01:54-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-07  10:01:54-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-07  10:02:14-main[ mainid]  INFO  stepdefinations.VerifyOrderSteps:59 - --------------User logged in successfully--------------
+			2020-04-07  10:02:14-main[ mainid]  INFO  stepdefinations.UpdatedPersonalInfoSteps:24 - --------------User logged in successfully--------------
+			2020-04-07  10:02:19-main[ mainid]  INFO  stepdefinations.UpdatedPersonalInfoSteps:41 - Updated information is verified
+			2020-04-07  10:02:19-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-07  10:02:19-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-07  10:33:29-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-07  10:33:29-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-07  10:36:18-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-07  10:36:18-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-07  10:36:37-main[ mainid]  INFO  stepdefinations.VerifyOrderSteps:59 - --------------User logged in successfully--------------
+			2020-04-07  10:36:44-main[ mainid]  INFO  pages.SelectTshirt:40 - Selected T-shirt color is Blue
+			2020-04-07  10:37:03-main[ mainid]  INFO  stepdefinations.VerifyOrderSteps:94 - Your order on My Store is successfully placed
+			2020-04-07  10:37:03-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-07  10:37:04-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-07  10:37:04-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-07  10:37:04-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-07  10:37:23-main[ mainid]  INFO  stepdefinations.VerifyOrderSteps:59 - --------------User logged in successfully--------------
+			2020-04-07  10:37:23-main[ mainid]  INFO  stepdefinations.UpdatedPersonalInfoSteps:24 - --------------User logged in successfully--------------
+			2020-04-07  10:37:27-main[ mainid]  INFO  stepdefinations.UpdatedPersonalInfoSteps:41 - Updated information is verified
+			2020-04-07  10:37:27-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-07  10:37:28-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			

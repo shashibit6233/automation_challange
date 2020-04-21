@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Example test run]">
+  <test name="Simple Test(failed)">
+    <classes>
+      <class name="runner.TestRunner">
+        <methods>
+          <include name="close"/>
+          <include name="createAccount"/>
+          <include name="initializeDriver"/>
+        </methods>
+      </class> <!-- runner.TestRunner -->
+    </classes>
+  </test> <!-- Simple Test(failed) -->
+</suite> <!-- Failed suite [Example test run] -->
