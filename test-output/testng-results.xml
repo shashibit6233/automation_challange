@@ -2,21 +2,33 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="110006" started-at="2020-04-21T08:04:31Z" finished-at="2020-04-21T08:06:21Z">
+  <suite name="Default suite" duration-ms="33157" started-at="2020-04-21T13:54:34Z" finished-at="2020-04-21T13:55:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="110006" started-at="2020-04-21T08:04:31Z" finished-at="2020-04-21T08:06:21Z">
+    <test name="Default test" duration-ms="33157" started-at="2020-04-21T13:54:34Z" finished-at="2020-04-21T13:55:08Z">
       <class name="runner.TestRunner">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:runner.TestRunner@5442a311]" name="initializeDriver" is-config="true" duration-ms="63280" started-at="2020-04-21T13:34:31Z" finished-at="2020-04-21T13:35:34Z">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:runner.TestRunner@6eebc39e]" name="initializeDriver" is-config="true" duration-ms="12112" started-at="2020-04-21T19:24:34Z" finished-at="2020-04-21T19:24:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="FAIL" signature="createAccount()[pri:0, instance:runner.TestRunner@5442a311]" name="createAccount" duration-ms="46708" started-at="2020-04-21T13:35:34Z" finished-at="2020-04-21T13:36:21Z">
+        <test-method status="FAIL" signature="createAccount()[pri:0, instance:runner.TestRunner@6eebc39e]" name="createAccount" duration-ms="19857" started-at="2020-04-21T19:24:47Z" finished-at="2020-04-21T19:25:06Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at pages.ShowTshirt.hoverMouse(ShowTshirt.java:35)
-	at runner.TestRunner.createAccount(TestRunner.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:50)
+	at com.sun.proxy.$Proxy7.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:227)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:39)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:213)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:210)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:208)
+	at utils.CommonFunctionsLib.enterTextInTextBox(CommonFunctionsLib.java:61)
+	at pages.SelectTshirt.addToCart(SelectTshirt.java:33)
+	at runner.TestRunner.createAccount(TestRunner.java:67)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -47,6 +59,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createAccount -->
+        <test-method status="PASS" signature="close()[pri:0, instance:runner.TestRunner@6eebc39e]" name="close" is-config="true" duration-ms="1168" started-at="2020-04-21T19:25:06Z" finished-at="2020-04-21T19:25:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
       </class> <!-- runner.TestRunner -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

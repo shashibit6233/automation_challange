@@ -24,18 +24,20 @@ import pages.ShoppingCartSumPage;
 import pages.ShowTshirt;
 import pages.Tshirts;
 
-public class TestRunner {
+public class TestRunner extends Driver {
 
 	public static CommonFunctionsLib comfunctions;
 	private static Logger logger = Logger.getLogger(TestRunner.class);;
-	 static Driver driver = new Driver();
+	static Driver dr = new Driver();
+	 //WebDriver driver ;
 	public static String newname = null;
 	public static String orderdet = null;
 
 	@BeforeClass
 	public void initializeDriver() throws IOException {
 		PropertyConfigurator.configure(CommonFunctionsLib.readDefaultProperties("log4jpath"));
-		driver.initialiseDriver();
+		
+		dr.initialiseDriver();
 		Driver.loadApplication(CommonFunctionsLib.readDefaultProperties("url"));
 	}
 
@@ -57,7 +59,7 @@ public class TestRunner {
 		logger.info("--------------User logged in successfully--------------");
 
 		tshirt.clickTshirts();
-		WebDriver driver = null;
+		
 		ShowTshirt showts = new ShowTshirt(driver);
 		showts.hoverMouse();
 
@@ -96,10 +98,10 @@ public class TestRunner {
 
 	}
 
-	/*@AfterClass
+	@AfterClass
 	public void close() {
-		driver.closeDriver();
-	}*/
+		dr.closeDriver();
+	}
 
 	
 
