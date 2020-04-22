@@ -30,64 +30,61 @@ public class TestRunner extends Driver {
 	static Driver dr = new Driver();
 	public static String newname = null;
 	public static String orderdet = null;
-	CreateAccount create_acct= new CreateAccount();
-	HomePage hp = new HomePage();
-	Tshirts tshirt = new Tshirts();
-	ShowTshirt showts = new ShowTshirt(driver);
-	ProductAdded proadd = new ProductAdded();
-	ShoppingCartSumPage shopsumpage = new ShoppingCartSumPage();
-	Address adr = new Address();
-	Shipping ship = new Shipping();
-	Payment pay = new Payment();
-	OrderSummary ordSum = new OrderSummary();
-	OrderConfirmationPage ordconf = new OrderConfirmationPage();
-	BackToMyOrder myord = new BackToMyOrder();
-	LoginPage login = new LoginPage();
-	
+
 	@BeforeClass
 	public void initializeDriver() throws IOException {
 		PropertyConfigurator.configure(CommonFunctionsLib.readDefaultProperties("log4jpath"));
-		
+
 		dr.initialiseDriver();
 		Driver.loadApplication(CommonFunctionsLib.readDefaultProperties("url"));
+
 	}
-	@Test(priority=0)
+
+	@Test(priority = 0)
 	public void registerUser() throws IOException {
+		CreateAccount create_acct = new CreateAccount();
+		HomePage hp = new HomePage();
+		LoginPage login = new LoginPage();
 		hp.clickSignIn();
-		String email=CommonFunctionsLib.readDataExcel("Email");
-		login.enterCreateAccountEmail(email+"@gmail.com");
+
+		String email = CommonFunctionsLib.getAlphaNumericString(8);
+		login.enterCreateAccountEmail(email + "@gmail.com");
 		login.clickCreateAccount();
 		create_acct.enterTitleDetails();
 		create_acct.enterAddressDetails();
 		create_acct.clickRegister();
+
 	}
 
-	@Test(priority=1)
+	@Test(priority = 1)
 
 	public void placeOrder() throws InterruptedException {
-		
-		hp.clickSignIn();
-		login.enterSignInDetails(CommonFunctionsLib.readTestDataProperties("userid"),
-				CommonFunctionsLib.readTestDataProperties("password"));
-		login.clickSignIn();		
-		String custname = tshirt.getCustomerName();
-		Assert.assertNotNull(custname);
-		logger.info("--------------User logged in successfully--------------");
+
+		Tshirts tshirt = new Tshirts();
+		ShowTshirt showts = new ShowTshirt(driver);
+		ProductAdded proadd = new ProductAdded();
+		ShoppingCartSumPage shopsumpage = new ShoppingCartSumPage();
+		Address adr = new Address();
+		Shipping ship = new Shipping();
+		Payment pay = new Payment();
+		OrderSummary ordSum = new OrderSummary();
+		OrderConfirmationPage ordconf = new OrderConfirmationPage();
+		BackToMyOrder myord = new BackToMyOrder();
 
 		tshirt.clickTshirts();
-
-		showts.hoverMouse();	
+		showts.hoverMouse();
 		proadd.productAddedToShoppingKart();
 		shopsumpage.proceedToShopCheckOut();
 		adr.proceedToAddressCheckOut();
 		ship.proceedToShippingCheckOut();
-		String expectedprice =pay.totalAmountToPay();		
-		String expectedmode =pay.modeOfPayment();			
+		String expectedprice = pay.totalAmountToPay();
+		String expectedmode = pay.modeOfPayment();
 		pay.selectpaymentType();
 		ordSum.orderSummary();
 		ordconf.myOrderInfo();
-		ordconf.myOrderDetails();		
-		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(),CommonFunctionsLib.generateDate(),expectedprice,expectedmode);
+		ordconf.myOrderDetails();
+		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(), CommonFunctionsLib.generateDate(), expectedprice,
+				expectedmode);
 		Assert.assertTrue(flag);
 		logger.info("Your order on My Store is successfully placed");
 		CommonFunctionsLib.getScreenshot();
@@ -98,9 +95,5 @@ public class TestRunner extends Driver {
 	public void close() {
 		dr.closeDriver();
 	}
-
-	
-
-	
 
 }
