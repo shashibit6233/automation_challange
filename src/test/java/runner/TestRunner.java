@@ -55,7 +55,6 @@ public class TestRunner extends Driver {
 		Tshirts tshirt = new Tshirts();
 		String custname = tshirt.getCustomerName();
 		Assert.assertNotNull(custname);
-
 		logger.info("--------------User logged in successfully--------------");
 
 		tshirt.clickTshirts();
@@ -76,25 +75,19 @@ public class TestRunner extends Driver {
 		ship.proceedToShippingCheckOut();
 
 		Payment pay = new Payment();
-		pay.totalAmountToPay();
-		pay.modeOfPayment();
+		String expectedprice =pay.totalAmountToPay();		
+		String expectedmode =pay.modeOfPayment();			
 		pay.selectpaymentType();
-		
-
 		OrderSummary ordSum = new OrderSummary();
 		ordSum.orderSummary();
 
 		OrderConfirmationPage ordconf = new OrderConfirmationPage();
 		ordconf.myOrderInfo();
 		ordconf.myOrderDetails();
-		
-
-		BackToMyOrder myord = new BackToMyOrder();
-		
-		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(),CommonFunctionsLib.generateDate(),pay.totalAmountToPay(),pay.modeOfPayment());
+		BackToMyOrder myord = new BackToMyOrder();		
+		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(),CommonFunctionsLib.generateDate(),expectedprice,expectedmode);
 		Assert.assertTrue(flag);
 		logger.info("Your order on My Store is successfully placed");
-
 		CommonFunctionsLib.getScreenshot();
 
 	}
