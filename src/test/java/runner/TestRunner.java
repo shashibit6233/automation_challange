@@ -4,7 +4,6 @@ import java.io.IOException;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,13 +11,13 @@ import utils.CommonFunctionsLib;
 import utils.Driver;
 import pages.Address;
 import pages.BackToMyOrder;
+import pages.CreateAccount;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.OrderConfirmationPage;
 import pages.OrderSummary;
 import pages.Payment;
 import pages.ProductAdded;
-import pages.SelectTshirt;
 import pages.Shipping;
 import pages.ShoppingCartSumPage;
 import pages.ShowTshirt;
@@ -29,63 +28,63 @@ public class TestRunner extends Driver {
 	public static CommonFunctionsLib comfunctions;
 	private static Logger logger = Logger.getLogger(TestRunner.class);;
 	static Driver dr = new Driver();
-	 //WebDriver driver ;
 	public static String newname = null;
 	public static String orderdet = null;
 
 	@BeforeClass
 	public void initializeDriver() throws IOException {
 		PropertyConfigurator.configure(CommonFunctionsLib.readDefaultProperties("log4jpath"));
-		
+
 		dr.initialiseDriver();
 		Driver.loadApplication(CommonFunctionsLib.readDefaultProperties("url"));
+
 	}
 
-	@Test
-
-	public void createAccount() throws InterruptedException {
+	@Test(priority = 0)
+	public void registerUser() throws IOException {
+		CreateAccount create_acct = new CreateAccount();
 		HomePage hp = new HomePage();
+		LoginPage login = new LoginPage();
 		hp.clickSignIn();
 
-		LoginPage login = new LoginPage();
-		login.enterSignInDetails(CommonFunctionsLib.readTestDataProperties("userid"),
-				CommonFunctionsLib.readTestDataProperties("password"));
-		login.clickSignIn();
+		String email = CommonFunctionsLib.getAlphaNumericString(8);
+		login.enterCreateAccountEmail(email + "@gmail.com");
+		login.clickCreateAccount();
+		create_acct.enterTitleDetails();
+		create_acct.enterAddressDetails();
+		create_acct.clickRegister();
+
+	}
+
+	@Test(priority = 1)
+
+	public void placeOrder() throws InterruptedException {
 
 		Tshirts tshirt = new Tshirts();
-		String custname = tshirt.getCustomerName();
-		Assert.assertNotNull(custname);
-		logger.info("--------------User logged in successfully--------------");
+		ShowTshirt showts = new ShowTshirt(driver);
+		ProductAdded proadd = new ProductAdded();
+		ShoppingCartSumPage shopsumpage = new ShoppingCartSumPage();
+		Address adr = new Address();
+		Shipping ship = new Shipping();
+		Payment pay = new Payment();
+		OrderSummary ordSum = new OrderSummary();
+		OrderConfirmationPage ordconf = new OrderConfirmationPage();
+		BackToMyOrder myord = new BackToMyOrder();
 
 		tshirt.clickTshirts();
-		
-		ShowTshirt showts = new ShowTshirt(driver);
-		showts.hoverMouse();	
-
-		ProductAdded proadd = new ProductAdded();
+		showts.hoverMouse();
 		proadd.productAddedToShoppingKart();
-
-		ShoppingCartSumPage shopsumpage = new ShoppingCartSumPage();
 		shopsumpage.proceedToShopCheckOut();
-
-		Address adr = new Address();
 		adr.proceedToAddressCheckOut();
-
-		Shipping ship = new Shipping();
 		ship.proceedToShippingCheckOut();
-
-		Payment pay = new Payment();
-		String expectedprice =pay.totalAmountToPay();		
-		String expectedmode =pay.modeOfPayment();			
+		String expectedprice = pay.totalAmountToPay();
+		String expectedmode = pay.modeOfPayment();
 		pay.selectpaymentType();
-		OrderSummary ordSum = new OrderSummary();
 		ordSum.orderSummary();
-
-		OrderConfirmationPage ordconf = new OrderConfirmationPage();
 		ordconf.myOrderInfo();
 		ordconf.myOrderDetails();
-		BackToMyOrder myord = new BackToMyOrder();		
-		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(),CommonFunctionsLib.generateDate(),expectedprice,expectedmode);
+		Boolean flag = myord.verifyMyOrder(ordconf.myOrderInfo(), CommonFunctionsLib.generateDate(), expectedprice,
+				expectedmode);
 		Assert.assertTrue(flag);
 		logger.info("Your order on My Store is successfully placed");
 		CommonFunctionsLib.getScreenshot();
@@ -96,9 +95,5 @@ public class TestRunner extends Driver {
 	public void close() {
 		dr.closeDriver();
 	}
-
-	
-
-	
 
 }
