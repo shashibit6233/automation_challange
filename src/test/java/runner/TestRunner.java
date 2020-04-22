@@ -55,7 +55,6 @@ public class TestRunner extends Driver {
 		Tshirts tshirt = new Tshirts();
 		String custname = tshirt.getCustomerName();
 		Assert.assertNotNull(custname);
-
 		logger.info("--------------User logged in successfully--------------");
 
 		tshirt.clickTshirts();
