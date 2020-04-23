@@ -46,7 +46,7 @@ public class TestRunner extends Driver {
 		HomePage hp = new HomePage();
 		hp.clickSignIn();
 		LoginPage login = new LoginPage();
-		String email=CommonFunctionsLib.readDataExcel("Email");
+		String email=CommonFunctionsLib.getAlphaNumericString(8);
 		login.enterCreateAccountEmail(email+"@gmail.com");
 		login.clickCreateAccount();
 		create_acct.enterTitleDetails();
@@ -59,7 +59,6 @@ public class TestRunner extends Driver {
 	@Test(priority=1)
 
 	public void placeOrder() throws InterruptedException {
-		HomePage hp = new HomePage();
 		Tshirts tshirt = new Tshirts();
 		ShowTshirt showts = new ShowTshirt(driver);
 		ProductAdded proadd = new ProductAdded();
@@ -71,9 +70,6 @@ public class TestRunner extends Driver {
 		OrderConfirmationPage ordconf = new OrderConfirmationPage();
 		BackToMyOrder myord = new BackToMyOrder();
 		LoginPage login = new LoginPage();
-		hp.clickSignIn();
-		login.enterSignInDetails(CommonFunctionsLib.readTestDataProperties("userid"),
-				CommonFunctionsLib.readTestDataProperties("password"));
 		login.clickSignIn();		
 		String custname = tshirt.getCustomerName();
 		Assert.assertNotNull(custname);
