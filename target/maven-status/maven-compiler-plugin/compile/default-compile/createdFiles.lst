@@ -13,6 +13,7 @@ pages\PersonalInfoPage.class
 pages\Shipping.class
 pages\ShowTshirt.class
 pages\ShoppingCartSumPage.class
+pages\CreateAccount.class
 pages\OrderSummary.class
 pages\ProductAdded.class
 utils\TestUtil.class
