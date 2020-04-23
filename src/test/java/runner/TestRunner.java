@@ -68,15 +68,11 @@ public class TestRunner extends Driver {
 		Payment pay = new Payment();
 		OrderSummary ordSum = new OrderSummary();
 		OrderConfirmationPage ordconf = new OrderConfirmationPage();
-		BackToMyOrder myord = new BackToMyOrder();
-		LoginPage login = new LoginPage();
-		login.clickSignIn();		
+		BackToMyOrder myord = new BackToMyOrder();		
 		String custname = tshirt.getCustomerName();
 		Assert.assertNotNull(custname);
 		logger.info("--------------User logged in successfully--------------");
-
 		tshirt.clickTshirts();
-
 		showts.hoverMouse();	
 		proadd.productAddedToShoppingKart();
 		shopsumpage.proceedToShopCheckOut();
