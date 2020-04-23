@@ -2,10 +2,11 @@ package pages;
 
 
 import org.apache.log4j.Logger;
-import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
+
 import utils.CommonFunctionsLib;
 import utils.Driver;
 
@@ -27,7 +28,6 @@ public class Payment extends Driver {
 		boolean flag = amt.isDisplayed();
 		Assert.assertTrue(flag);
 		String amount = amt.getText().trim();
-		System.out.println("----------------Printing Amount----------------"+amount);
 		return amount;
 		
 	}
@@ -36,14 +36,13 @@ public class Payment extends Driver {
 	public String modeOfPayment() {
 		boolean flag = btnpay.isDisplayed();
 		Assert.assertTrue(flag);		
-		logger.info(Driver.class.getName() + "--------------Bank-Wire payment is available--------------");
+		logger.info("Bank-Wire payment is getting displayed on Payment page");
 		String modeofpay = "Bank wire";
 		return modeofpay;
 		
 	}
 
 	public void selectpaymentType() {
-		
 		CommonFunctionsLib.clickButton(btnpay);
 		
 	}
