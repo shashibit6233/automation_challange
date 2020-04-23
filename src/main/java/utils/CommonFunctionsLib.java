@@ -136,7 +136,7 @@ public class CommonFunctionsLib extends Driver {
 		try {
 			File sourcePath = ((TakesScreenshot) Driver.driver).getScreenshotAs(OutputType.FILE);
 			File destinationPath = new File(
-					System.getProperty("user.dir") + "/target/testng-screenshots/" + screenshotName + ".png");
+					System.getProperty("user.dir") + "/target/" + screenshotName + ".png");
 			Files.copy(sourcePath, destinationPath);
 			//Reporter.addScreenCaptureFromPath(destinationPath.toString());
 		} catch (Exception e) {
