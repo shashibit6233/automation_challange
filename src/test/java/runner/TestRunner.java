@@ -3,7 +3,7 @@ package runner;
 import java.io.IOException;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.junit.Assert;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -52,7 +52,7 @@ public class TestRunner extends Driver {
 		create_acct.enterTitleDetails();
 		create_acct.enterAddressDetails();
 		create_acct.clickRegister();
-		Assert.assertEquals("User is not navigated to My Account Page","My account - My Store",driver.getTitle());
+		Assert.assertEquals("My account - My Store",driver.getTitle(),"User is not navigated to My Account Page");
 		logger.info("User is navigated to My Account Page");
 	}
 
@@ -71,7 +71,7 @@ public class TestRunner extends Driver {
 		BackToMyOrder myord = new BackToMyOrder();		
 		String custname = tshirt.getCustomerName();
 		Assert.assertNotNull(custname);
-		logger.info("--------------User logged in successfully--------------");
+		logger.info("User logged in successfully");
 		tshirt.clickTshirts();
 		showts.hoverMouse();	
 		proadd.productAddedToShoppingKart();

@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Example test run" duration-ms="89782" started-at="2020-04-23T15:20:54Z" finished-at="2020-04-23T15:22:24Z">
+  <suite name="Automation Challenge" duration-ms="75904" started-at="2020-04-23T17:24:57Z" finished-at="2020-04-23T17:26:13Z">
     <groups>
     </groups>
-    <test name="Simple Test" duration-ms="89782" started-at="2020-04-23T15:20:54Z" finished-at="2020-04-23T15:22:24Z">
+    <test name="My Store Automation" duration-ms="75904" started-at="2020-04-23T17:24:57Z" finished-at="2020-04-23T17:26:13Z">
       <class name="runner.TestRunner">
-        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:runner.TestRunner@7f9a81e8]" name="initializeDriver" is-config="true" duration-ms="38050" started-at="2020-04-23T20:50:54Z" finished-at="2020-04-23T20:51:32Z">
+        <test-method status="PASS" signature="initializeDriver()[pri:0, instance:runner.TestRunner@4439f31e]" name="initializeDriver" is-config="true" duration-ms="26464" started-at="2020-04-23T22:54:57Z" finished-at="2020-04-23T22:55:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeDriver -->
-        <test-method status="PASS" signature="registerUser()[pri:0, instance:runner.TestRunner@7f9a81e8]" name="registerUser" duration-ms="21234" started-at="2020-04-23T20:51:32Z" finished-at="2020-04-23T20:51:53Z">
+        <test-method status="PASS" signature="registerUser()[pri:0, instance:runner.TestRunner@4439f31e]" name="registerUser" duration-ms="22015" started-at="2020-04-23T22:55:24Z" finished-at="2020-04-23T22:55:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerUser -->
-        <test-method status="PASS" signature="placeOrder()[pri:0, instance:runner.TestRunner@7f9a81e8]" name="placeOrder" duration-ms="28911" started-at="2020-04-23T20:51:53Z" finished-at="2020-04-23T20:52:22Z">
+        <test-method status="PASS" signature="placeOrder()[pri:0, instance:runner.TestRunner@4439f31e]" name="placeOrder" duration-ms="25755" started-at="2020-04-23T22:55:46Z" finished-at="2020-04-23T22:56:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- placeOrder -->
-        <test-method status="PASS" signature="close()[pri:0, instance:runner.TestRunner@7f9a81e8]" name="close" is-config="true" duration-ms="1525" started-at="2020-04-23T20:52:22Z" finished-at="2020-04-23T20:52:24Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:runner.TestRunner@4439f31e]" name="close" is-config="true" duration-ms="1649" started-at="2020-04-23T22:56:11Z" finished-at="2020-04-23T22:56:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
       </class> <!-- runner.TestRunner -->
-    </test> <!-- Simple Test -->
-  </suite> <!-- Example test run -->
+    </test> <!-- My Store Automation -->
+  </suite> <!-- Automation Challenge -->
 </testng-results>

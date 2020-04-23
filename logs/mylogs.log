@@ -48,4 +48,53 @@
 			2020-04-23  20:52:22-main[ mainid]  INFO  runner.TestRunner:89 - Your order on My Store is successfully placed
 			2020-04-23  20:52:22-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
 			2020-04-23  20:52:24-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  22:26:59-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  22:26:59-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  22:27:52-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  22:27:52-main[ mainid]  INFO  runner.TestRunner:74 - --------------User logged in successfully--------------
+			2020-04-23  22:27:57-main[ mainid]  INFO  pages.ShowTshirt:44 - Add to cart button with cost value: $16.51 is getting displayed
+			2020-04-23  22:27:57-main[ mainid]  INFO  pages.ShowTshirt:48 - popup window with Proceed to Checkout is getting displayed
+			2020-04-23  22:28:03-main[ mainid]  INFO  pages.Address:43 - Billing address is same as Delivery address
+			2020-04-23  22:28:05-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  22:28:06-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  22:38:27-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  22:38:27-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  22:39:26-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  22:39:26-main[ mainid]  INFO  runner.TestRunner:74 - --------------User logged in successfully--------------
+			2020-04-23  22:39:31-main[ mainid]  INFO  pages.ShowTshirt:44 - Add to cart button with cost value: $16.51 is getting displayed
+			2020-04-23  22:39:31-main[ mainid]  INFO  pages.ShowTshirt:48 - popup window with Proceed to Checkout is getting displayed
+			2020-04-23  22:39:40-main[ mainid]  INFO  pages.Address:44 - Billing address is same as Delivery address
+			2020-04-23  22:39:42-main[ mainid]  INFO  pages.Shipping:35 - You must agree to the terms of service before continuing. is getting displayed
+			2020-04-23  22:39:45-main[ mainid]  INFO  pages.Payment:39 - Bank-Wire payment is getting displayed on Payment page
+			2020-04-23  22:39:52-main[ mainid]  INFO  runner.TestRunner:89 - Your order on My Store is successfully placed
+			2020-04-23  22:39:52-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  22:39:54-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  22:43:15-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  22:43:15-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  22:43:57-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  22:43:57-main[ mainid]  INFO  runner.TestRunner:74 - --------------User logged in successfully--------------
+			2020-04-23  22:44:00-main[ mainid]  INFO  pages.ShowTshirt:44 - Add to cart button with cost value: $16.51 is getting displayed
+			2020-04-23  22:44:00-main[ mainid]  INFO  pages.ShowTshirt:48 - popup window with Proceed to Checkout is getting displayed
+			2020-04-23  22:44:08-main[ mainid]  INFO  pages.Address:44 - Billing address is same as Delivery address
+			2020-04-23  22:44:14-main[ mainid]  INFO  pages.Shipping:35 - You must agree to the terms of service before continuing. is getting displayed
+			2020-04-23  22:44:18-main[ mainid]  INFO  pages.Payment:39 - Bank-Wire payment is getting displayed on Payment page
+			2020-04-23  22:44:25-main[ mainid]  INFO  runner.TestRunner:89 - Your order on My Store is successfully placed
+			2020-04-23  22:44:25-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  22:44:27-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  22:54:57-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  22:54:57-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  22:55:46-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  22:55:46-main[ mainid]  INFO  runner.TestRunner:74 - --------------User logged in successfully--------------
+			2020-04-23  22:55:50-main[ mainid]  INFO  pages.ShowTshirt:44 - Add to cart button with cost value: $16.51 is getting displayed
+			2020-04-23  22:55:50-main[ mainid]  INFO  pages.ShowTshirt:48 - popup window with Proceed to Checkout is getting displayed
+			2020-04-23  22:55:58-main[ mainid]  INFO  pages.Address:44 - Billing address is same as Delivery address
+			2020-04-23  22:56:00-main[ mainid]  INFO  pages.Shipping:35 - You must agree to the terms of service before continuing. is getting displayed
+			2020-04-23  22:56:04-main[ mainid]  INFO  pages.Payment:39 - Bank-Wire payment is getting displayed on Payment page
+			2020-04-23  22:56:11-main[ mainid]  INFO  pages.BackToMyOrder:31 - Order is placed with order number: BJGDDNKDX
+			2020-04-23  22:56:11-main[ mainid]  INFO  pages.BackToMyOrder:43 - Order Date is same as expected date: 04/23/2020
+			2020-04-23  22:56:11-main[ mainid]  INFO  pages.BackToMyOrder:44 - Order Price is same as expected Price: $18.51
+			2020-04-23  22:56:11-main[ mainid]  INFO  pages.BackToMyOrder:45 - Mode of payment is same as expected mode of payment: Bank wire
+			2020-04-23  22:56:11-main[ mainid]  INFO  runner.TestRunner:89 - Your order on My Store is successfully placed
+			2020-04-23  22:56:11-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  22:56:13-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
 			

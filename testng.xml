@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Example test run">
-	<test name="Simple Test">
+<suite name="Automation Challenge">
+	<test name="My Store Automation">
 		<classes>
 			<class name="runner.TestRunner" />
 		</classes>

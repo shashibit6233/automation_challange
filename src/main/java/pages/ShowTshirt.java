@@ -2,6 +2,7 @@ package pages;
 
 import java.util.Set;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +13,8 @@ import utils.Driver;
 import org.openqa.selenium.interactions.Actions;
 
 public class ShowTshirt extends Driver {
+	private Logger logger = Logger.getLogger(this.getClass());
+	
 	WebDriver driver;
 	@FindBy(xpath = "//a[@title='Add to cart']")
 	WebElement imgadd;
@@ -30,18 +33,19 @@ public class ShowTshirt extends Driver {
 	}
 
 	public void hoverMouse() {
-
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", imgtshirt);
 		Actions action = new Actions(driver);
 		action.moveToElement(imgtshirt).moveToElement(imgadd).build().perform();
 		String tshirtPrice = priceimg.getText();
-		Assert.assertNotNull(tshirtPrice, "pricong value is displayed");
+		Assert.assertNotNull(tshirtPrice, "pricing value is not displayed");
 		driver.getWindowHandle();		
 		action.moveToElement(imgtshirt).moveToElement(imgadd).click().build().perform();
+		logger.info("Add to cart button with cost value: "+ tshirtPrice + " is getting displayed");
 		Set<String> childwindow = driver.getWindowHandles();
 		int childwindowsize= childwindow.size();
-		Assert.assertNotNull(childwindowsize, "popup window is isplayed");
+		Assert.assertNotNull(childwindowsize, "popup window is not displayed");
+		logger.info("popup window with Proceed to Checkout is getting displayed");
 		
 
 	}
