@@ -46,7 +46,7 @@ public class TestRunner extends Driver {
 		HomePage hp = new HomePage();
 		hp.clickSignIn();
 		LoginPage login = new LoginPage();
-		String email=CommonFunctionsLib.readDataExcel("Email");
+		String email=CommonFunctionsLib.getAlphaNumericString(8);
 		login.enterCreateAccountEmail(email+"@gmail.com");
 		login.clickCreateAccount();
 		create_acct.enterTitleDetails();
