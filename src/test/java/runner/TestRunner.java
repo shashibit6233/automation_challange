@@ -30,19 +30,7 @@ public class TestRunner extends Driver {
 	static Driver dr = new Driver();
 	public static String newname = null;
 	public static String orderdet = null;
-	CreateAccount create_acct= new CreateAccount();
-	HomePage hp = new HomePage();
-	Tshirts tshirt = new Tshirts();
-	ShowTshirt showts = new ShowTshirt(driver);
-	ProductAdded proadd = new ProductAdded();
-	ShoppingCartSumPage shopsumpage = new ShoppingCartSumPage();
-	Address adr = new Address();
-	Shipping ship = new Shipping();
-	Payment pay = new Payment();
-	OrderSummary ordSum = new OrderSummary();
-	OrderConfirmationPage ordconf = new OrderConfirmationPage();
-	BackToMyOrder myord = new BackToMyOrder();
-	LoginPage login = new LoginPage();
+	
 	
 	@BeforeClass
 	public void initializeDriver() throws IOException {
@@ -51,21 +39,38 @@ public class TestRunner extends Driver {
 		dr.initialiseDriver();
 		Driver.loadApplication(CommonFunctionsLib.readDefaultProperties("url"));
 	}
+	
 	@Test(priority=0)
 	public void registerUser() throws IOException {
+		CreateAccount create_acct= new CreateAccount();
+		HomePage hp = new HomePage();
 		hp.clickSignIn();
+		LoginPage login = new LoginPage();
 		String email=CommonFunctionsLib.readDataExcel("Email");
 		login.enterCreateAccountEmail(email+"@gmail.com");
 		login.clickCreateAccount();
 		create_acct.enterTitleDetails();
 		create_acct.enterAddressDetails();
 		create_acct.clickRegister();
+		Assert.assertEquals("User is not navigated to My Account Page","My account - My Store",driver.getTitle());
+		logger.info("User is navigated to My Account Page");
 	}
 
 	@Test(priority=1)
 
 	public void placeOrder() throws InterruptedException {
-		
+		HomePage hp = new HomePage();
+		Tshirts tshirt = new Tshirts();
+		ShowTshirt showts = new ShowTshirt(driver);
+		ProductAdded proadd = new ProductAdded();
+		ShoppingCartSumPage shopsumpage = new ShoppingCartSumPage();
+		Address adr = new Address();
+		Shipping ship = new Shipping();
+		Payment pay = new Payment();
+		OrderSummary ordSum = new OrderSummary();
+		OrderConfirmationPage ordconf = new OrderConfirmationPage();
+		BackToMyOrder myord = new BackToMyOrder();
+		LoginPage login = new LoginPage();
 		hp.clickSignIn();
 		login.enterSignInDetails(CommonFunctionsLib.readTestDataProperties("userid"),
 				CommonFunctionsLib.readTestDataProperties("password"));
