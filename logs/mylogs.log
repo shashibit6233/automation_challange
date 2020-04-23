@@ -1,4 +1,51 @@
 2020-04-23  18:54:44-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
 			2020-04-23  18:54:44-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
 			2020-04-23  18:55:56-main[ mainid]  INFO  runner.TestRunner:80 - --------------User logged in successfully--------------
+			2020-04-23  19:26:17-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:26:17-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:28:10-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:28:12-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  19:29:12-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:29:12-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:29:59-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  19:30:59-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:31:01-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  19:34:51-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:34:51-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:36:31-main[ mainid]  INFO  runner.TestRunner:80 - --------------User logged in successfully--------------
+			2020-04-23  19:37:00-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:37:03-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  19:38:23-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:38:23-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:39:55-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:39:56-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  19:40:45-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:40:45-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:42:38-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:42:39-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  19:44:21-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:44:21-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:46:16-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:46:17-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  19:47:16-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  19:47:16-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  19:48:05-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  19:48:24-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  19:48:26-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  20:46:54-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  20:46:54-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  20:47:44-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  20:47:44-main[ mainid]  INFO  runner.TestRunner:74 - --------------User logged in successfully--------------
+			2020-04-23  20:48:01-main[ mainid]  INFO  pages.Payment:39 - utils.Driver--------------Bank-Wire payment is available--------------
+			2020-04-23  20:48:08-main[ mainid]  INFO  runner.TestRunner:89 - Your order on My Store is successfully placed
+			2020-04-23  20:48:08-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  20:48:12-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
+			2020-04-23  20:50:54-main[ mainid]  INFO  utils.Driver:16 - utils.Driver--------------Initialise Driver--------------
+			2020-04-23  20:50:54-main[ mainid]  INFO  utils.DriverFactory:22 - class java.lang.Class--------------Initialise Driver----------------
+			2020-04-23  20:51:53-main[ mainid]  INFO  runner.TestRunner:56 - User is navigated to My Account Page
+			2020-04-23  20:51:53-main[ mainid]  INFO  runner.TestRunner:74 - --------------User logged in successfully--------------
+			2020-04-23  20:52:13-main[ mainid]  INFO  pages.Payment:39 - utils.Driver--------------Bank-Wire payment is available--------------
+			2020-04-23  20:52:22-main[ mainid]  INFO  runner.TestRunner:89 - Your order on My Store is successfully placed
+			2020-04-23  20:52:22-main[ mainid]  INFO  utils.Driver:32 - utils.Driver------------Close Driver--------------
+			2020-04-23  20:52:24-main[ mainid]  INFO  utils.DriverFactory:41 - ---------------Driver Closed--------------
 			
