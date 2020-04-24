@@ -8,15 +8,14 @@
 
 Things you need to install to run the code: -> Eclipse or Intellij Idea
 
-Testdata- Create user to login. After creating user, change user email and password in testData.properties file which is present in resources.
+Testdata- TestData is taken from xlsx file to create user. For order details test data is taken from properties file.
 
 **Built With**
 
-Framework - Cucumber
+Framework - TestNG
 
 Maven - Dependency Management
 
-Report- Extent report
 
 **Steps to run**
 
@@ -32,6 +31,3 @@ OR
 
 2.write mvn test and hit enter
 
-**Improvement scope**
-
-1.We can take screenshots for each step instead of failed ones.
